@@ -7,11 +7,6 @@ public class Requirement {
     private ArrayList<Course> courses;
     private ArrayList<Requirement> subReqs;
 
-    public Requirement(boolean allRequired, ArrayList<Course> courses) {
-        this.allRequired = allRequired;
-        this.courses = courses;
-    }
-
     public Requirement(String description, boolean allRequired,
             ArrayList<Course> courses) {
         this.description = description;
