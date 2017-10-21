@@ -45,25 +45,41 @@ true
         Choose one of the following:
         false,0
         CSE 3231 -1 3 0 %#Software Engineering Techniques
-        CSE 3241-1 3 0 %#Introduction to Database Systems
+        CSE 3241 -1 3 0 %#Introduction to Database Systems
         ]
         [
         Choose one of the following:
         false,0
-        CSE 3321 -1 3 0 %#Software Engineering Techniques
-        CSE 3341-1 3 0 %#Introduction to Database Systems
+        CSE 3321 -1 3 0 %#Automata and Formal Languages
+        CSE 3341 -1 3 0 %#Principles of Programming Languages
         ]
         [
         Choose one of the following:
         false,0
-        CSE 3421 -1 3 0 %#Software Engineering Techniques
-        CSE 3461 -1 3 0 %#Introduction to Database Systems
+        CSE 3421 -1 3 0 %#Introduction to Computer Architecture
+        CSE 3461 -1 3 0 %#Computer Networking and Internet Technologies
         ]
         [
         Choose one of the following:
         false,0
-        CSE 3521 -1 3 0 %#Software Engineering Techniques
-        CSE 3541 -1 3 0 %#Introduction to Database Systems
+        CSE 3521 -1 3 0 %#Survey of Artificial Intelligence I: Basic Techniques
+        CSE 3541 -1 3 0 %#Computer Game and Animation Techniques
+        ]
+        [
+        Choose one of the following:
+        false,0
+        CSE 3901 -1 3 0 %#Project: Design, Development, and Documentation of Web Applications
+        CSE 3902 -1 4 0 %#Project: Design, Development, and Documentation of Interactive Systems
+        CSE 3902 -1 4 0 %#Project: Design, Development, and Documentation of System Software
+        ]
+        [
+        Choose one of the following projects:
+        false,0
+        CSE 5911 -1 4 0 %#Capstone Design: Software Applications
+        CSE 5912 -1 4 0 %#Capstone Design: Game Design and Development
+        CSE 5913 -1 4 0 %#Capstone Design: Computer Animation
+        CSE 5914 -1 4 0 %#Capstone Design: Knowledge-Based Systems
+        CSE 5915 -1 4 0 %#Capstone Design: Information Systems
         ]
     ]
 ]
