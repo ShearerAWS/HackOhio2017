@@ -21,7 +21,7 @@ public class Major {
             throws IOException {
         String name = in.readLine();
         boolean allRequired = in.readLine().equals("true");
-        String line = in.readLine();
+        String line = in.readLine().trim();
         ArrayList<Course> courses = new ArrayList<Course>();
         ArrayList<Requirement> subReqs = new ArrayList<Requirement>();
         while (!line.equals("]")) {
@@ -33,5 +33,9 @@ public class Major {
             line = in.readLine().trim();
         }
         return new Requirement(name, allRequired, courses, subReqs);
+    }
+
+    public Requirement getRequirements() {
+        return this.requirements;
     }
 }

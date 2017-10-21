@@ -47,8 +47,8 @@ public class Course {
         for (int i = 0; i < reqs.length; i++) {
             String[] temp = reqs[i].split(",");
             for (int j = 0; j < temp.length; j++) {
-                courses.add(temp[i]);
-                types.add((char) (i + 94));
+                courses.add(temp[j]);
+                types.add((char) (j + 94));
 
             }
         }

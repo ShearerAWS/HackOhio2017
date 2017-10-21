@@ -1,0 +1,32 @@
+Computer Science and Engineering
+Department of Engineering
+[
+Computer Science and Engineering Requirements
+true
+    [
+    General College of Engineering Requirements
+    true
+    ENGR 1100 6 1 0 %
+    ENGR 1181 1 2 0 MATH1150,MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)
+    ENGR 1182 1 2 0 MATH1150,MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)
+    MATH 1151 -1 5 0 MATH 1150
+    MATH 1172 -1 5 0 MATH 1151
+    PHYSICS 1250 -1 5 0 MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)
+    ]
+    [
+    Computer Science Core
+    true
+    CSE 2221 -1 4 0 CSE1223:MATH1151,MATH1161.01,MATH1161.02
+    CSE 2231 -1 4 0 CSE2221
+    CSE 2321 -1 3 0 CSE2231
+    CSE 2331 -1 3 0 CSE2321:CSE2231:STAT3460,STAT3470:MATH3345
+    CSE 2421 -1 4 0 CSE2122,CSE2123,CSE2231:CSE2321,MATH2256
+    CSE 2431 -1 3 0 CSE2421,CSE2451:ECE2560
+        [
+    
+        false
+        CSE 2501 -1 1 0 %
+        PHILOS 1338 -1 4 0 %
+        ]
+    ]
+]

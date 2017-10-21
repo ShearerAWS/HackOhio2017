@@ -48,4 +48,16 @@ public class Requirement {
         }
         return false;
     }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ArrayList<Course> getCourses() {
+        return this.courses;
+    }
+
+    public ArrayList<Requirement> getSubReqs() {
+        return this.subReqs;
+    }
 }
