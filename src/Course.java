@@ -83,4 +83,31 @@ public class Course {
         this.requirements = requirements;
     }
 
+    public boolean hasPrereqs(ArrayList<Course> coursesTaken) {
+        boolean hasAll = true;
+        for (Prereq p : this.requirements) {
+            char type = p.getCategory();
+            if (type == 'a') {
+                this.hasPrereq(p, coursesTaken);
+            }
+        }
+        return hasAll;
+    }
+
+    public boolean hasPrereq(Prereq p, ArrayList<Course> coursesTaken) {
+        boolean hasCourse = false;
+        for (Course c : coursesTaken) {
+            if (c.getDepartment().equals(p.getCourse().getDepartment())) {
+                if (c.getCourseNumber() == p.getCourse().getCourseNumber()) {
+                    if (c.getSubNumber() == p.getCourse().getSubNumber()) {
+                        if (c.isIsHonors() == p.getCourse().isIsHonors()) {
+                            hasCourse = true;
+                        }
+                    }
+                }
+            }
+        }
+        return hasCourse;
+    }
+
 }
