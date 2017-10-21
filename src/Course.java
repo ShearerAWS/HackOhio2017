@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Course {
@@ -7,6 +11,22 @@ public class Course {
     int SubNumber;
     boolean IsHonors;
     ArrayList<Prereq> requirements = new ArrayList<Prereq>();
+
+    public Course(String department, int courseNumber, int subNumber,
+            boolean isHonors, ArrayList<Prereq> requirements) {
+
+        super();
+        this.Department = department;
+        this.CourseNumber = courseNumber;
+        this.SubNumber = subNumber;
+        this.IsHonors = isHonors;
+        this.requirements = requirements;
+    }
+
+    public static Course newCourse(String line) {
+        String[] lineArray = line.split(" ");
+        Course c = new Course(lineArray[])
+    }
 
     /**
      * @return the department
