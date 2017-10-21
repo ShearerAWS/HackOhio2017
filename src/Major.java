@@ -30,7 +30,7 @@ public class Major {
             } else {
                 courses.add(Course.newCourse(line));
             }
-            line = in.readLine();
+            line = in.readLine().trim();
         }
         return new Requirement(name, allRequired, courses, subReqs);
     }

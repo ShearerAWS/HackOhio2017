@@ -1,0 +1,18 @@
+Computer Science and Engineering
+Department of Engineering
+[
+Computer Science Core
+true
+CSE 2221
+CSE 2231 -1 0 CSE2221:MATH1172,MATH1152
+CSE 2321
+CSE 2331
+CSE 2421
+CSE 2431
+    [
+
+    false
+    CSE 2501
+    PHILOS 1338
+    ]
+]
