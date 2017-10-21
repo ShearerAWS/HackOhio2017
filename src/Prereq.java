@@ -1,4 +1,3 @@
-
 public class Prereq {
     char Category;
     Course course;
@@ -7,6 +6,17 @@ public class Prereq {
         this.course = c;
         this.Category = cat;
     }
+
+    /**
+     * public boolean hasPrereqs(ArrayList<Course> coursesTaken) { boolean
+     * hasAll = true; for (Prereq p : this.requirements) { char type =
+     * p.getCategory(); if (type == 'a') { this.hasPrereq(p, coursesTaken); } }
+     * return hasAll; }
+     * 
+     * public boolean hasPrereq(Prereq p, ArrayList<Course> coursesTaken) {
+     * boolean hasCourse = false; for (Course c : coursesTaken) { if
+     * (p.getCourse().equals(c)) { hasCourse = true; } } return hasCourse; }
+     */
 
     /**
      * @return the category

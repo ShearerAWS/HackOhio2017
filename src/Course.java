@@ -1,19 +1,13 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-
 public class Course {
 
     String Department;
     int CourseNumber;
     int SubNumber;
     boolean IsHonors;
-    ArrayList<Prereq> requirements = new ArrayList<Prereq>();
+    Prereq requirements;
 
     public Course(String department, int courseNumber, int subNumber,
-            boolean isHonors, ArrayList<Prereq> requirements) {
+            boolean isHonors, Prereq requirements) {
 
         super();
         this.Department = department;
@@ -25,7 +19,7 @@ public class Course {
 
     public static Course newCourse(String line) {
         String[] lineArray = line.split(" ");
-        Course c = new Course(lineArray[])
+        //Course c = new Course(lineArray[])
     }
 
     /**
@@ -91,7 +85,7 @@ public class Course {
     /**
      * @return the requirements
      */
-    public ArrayList<Prereq> getRequirements() {
+    public Prereq getRequirements() {
         return this.requirements;
     }
 
@@ -99,29 +93,8 @@ public class Course {
      * @param requirements
      *            the requirements to set
      */
-    public void setRequirements(ArrayList<Prereq> requirements) {
+    public void setRequirements(Prereq requirements) {
         this.requirements = requirements;
-    }
-
-    public boolean hasPrereqs(ArrayList<Course> coursesTaken) {
-        boolean hasAll = true;
-        for (Prereq p : this.requirements) {
-            char type = p.getCategory();
-            if (type == 'a') {
-                this.hasPrereq(p, coursesTaken);
-            }
-        }
-        return hasAll;
-    }
-
-    public boolean hasPrereq(Prereq p, ArrayList<Course> coursesTaken) {
-        boolean hasCourse = false;
-        for (Course c : coursesTaken) {
-            if (p.getCourse().equals(c)) {
-                hasCourse = true;
-            }
-        }
-        return hasCourse;
     }
 
     @Override
