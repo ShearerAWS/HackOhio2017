@@ -5,28 +5,34 @@ Computer Science and Engineering Requirements
 true
     [
     General College of Engineering Requirements
-    true
-    ENGR 1100 6 1 0 %
-    ENGR 1181 1 2 0 MATH1150,MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)
-    ENGR 1182 1 2 0 MATH1150,MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)
-    MATH 1151 -1 5 0 MATH 1150
-    MATH 1172 -1 5 0 MATH 1151
-    PHYSICS 1250 -1 5 0 MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)
+    true,0
+    ENGR 1100 6 1 0 %|Engineering Survey
+    ENGR 1181 1 2 0 MATH1150,MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)|Fundamentals of Engineering I
+    ENGR 1182 1 2 0 MATH1150,MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)|Fundamentals of Engineering II
+    MATH 1151 -1 5 0 MATH 1150|Calculus I
+    MATH 1172 -1 5 0 MATH 1151|Calculus 2 for Engineers
+    PHYSICS 1250 -1 5 0 MATH1151,MATH1161.01,MATH1161.02,MATH1181(H)|Mechanics, Thermal Physics, and Waves
     ]
     [
     Computer Science Core
-    true
-    CSE 2221 -1 4 0 CSE1223:MATH1151,MATH1161.01,MATH1161.02
-    CSE 2231 -1 4 0 CSE2221
-    CSE 2321 -1 3 0 CSE2231
-    CSE 2331 -1 3 0 CSE2321:CSE2231:STAT3460,STAT3470:MATH3345
-    CSE 2421 -1 4 0 CSE2122,CSE2123,CSE2231:CSE2321,MATH2256
-    CSE 2431 -1 3 0 CSE2421,CSE2451:ECE2560
+    true,0
+    CSE 2221 -1 4 0 CSE1223:MATH1151,MATH1161.01,MATH1161.02|Software I
+    CSE 2231 -1 4 0 CSE2221|Software II
+    CSE 2321 -1 3 0 CSE2231|Foundations I
+    CSE 2331 -1 3 0 CSE2321:CSE2231:STAT3460,STAT3470:MATH3345|Foundations II
+    CSE 2421 -1 4 0 CSE2122,CSE2123,CSE2231:CSE2321,MATH2256|Systems I
+    CSE 2431 -1 3 0 CSE2421,CSE2451:ECE2560|Systems II
         [
-    
-        false
-        CSE 2501 -1 1 0 %
-        PHILOS 1338 -1 4 0 %
+        Choose one of the following:
+        false,0
+        CSE 2501 -1 1 0 %|Social, Ethical, and Professional Issues in Computing
+        PHILOS 1338 -1 4 0 %|Ethics in the Professions: Introduction to Computing Ethics and Effective Presentation
         ]
     ]
+    [
+    Non-Computer Science Core
+    true,0
+    ECE 2020 -1 3 0 %|Introduction to Analog Systems
+    ECE 2060 -1 3 0 %|Circuits and Introduction to Digital Logic
+    
 ]
