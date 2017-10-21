@@ -8,9 +8,11 @@ public class Course {
     int CreditHours;
     boolean IsHonors;
     Prereq requirements;
+    String Title;
 
     public Course(String department, int courseNumber, int subNumber,
-            int creditHours, boolean isHonors, Prereq requirements) {
+            int creditHours, boolean isHonors, Prereq requirements,
+            String title) {
 
         super();
         this.Department = department;
@@ -19,6 +21,7 @@ public class Course {
         this.CreditHours = creditHours;
         this.IsHonors = isHonors;
         this.requirements = requirements;
+        this.Title = title;
     }
 
     @Override
@@ -35,7 +38,8 @@ public class Course {
     }
 
     public static Course newCourse(String line) {
-        String[] lineArray = line.split(" ");
+        String[] lineA = line.split("|");
+        String[] lineArray = lineA[0].split(" ");
         String dept = lineArray[0];
         int num = Integer.parseInt(lineArray[1]);
         int subNum = Integer.parseInt(lineArray[2]);
@@ -55,7 +59,7 @@ public class Course {
 
         Prereq pre = new Prereq(courses, types);
 
-        Course c = new Course(dept, num, subNum, hour, hon, pre);
+        Course c = new Course(dept, num, subNum, hour, hon, pre, lineA[1]);
 
         return c;
     }
