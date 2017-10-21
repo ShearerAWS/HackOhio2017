@@ -97,17 +97,29 @@ public class Course {
     public boolean hasPrereq(Prereq p, ArrayList<Course> coursesTaken) {
         boolean hasCourse = false;
         for (Course c : coursesTaken) {
-            if (c.getDepartment().equals(p.getCourse().getDepartment())) {
-                if (c.getCourseNumber() == p.getCourse().getCourseNumber()) {
-                    if (c.getSubNumber() == p.getCourse().getSubNumber()) {
-                        if (c.isIsHonors() == p.getCourse().isIsHonors()) {
-                            hasCourse = true;
+            if (p.getCourse().equals(c)) {
+                hasCourse = true;
+            }
+        }
+        return hasCourse;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        boolean test = false;
+        if (other instanceof Course) {
+            Course c = (Course) other;
+            if (c.getDepartment().equals(this.getDepartment())) {
+                if (c.getCourseNumber() == this.getCourseNumber()) {
+                    if (c.getSubNumber() == this.getSubNumber()) {
+                        if (c.isIsHonors() == this.isIsHonors()) {
+                            test = true;
                         }
                     }
                 }
             }
         }
-        return hasCourse;
+        return test;
     }
 
 }
