@@ -19,7 +19,16 @@ public class Course {
 
     public static Course newCourse(String line) {
         String[] lineArray = line.split(" ");
-        //Course c = new Course(lineArray[])
+        String dept = lineArray[0];
+        int num = Integer.parseInt(lineArray[1]);
+        int subNum = Integer.parseInt(lineArray[2]);
+        boolean hon = Integer.parseInt(lineArray[3]) == 1;
+
+        Prereq pre = new Prereq();
+
+        Course c = new Course(dept, num, subNum, hon, pre);
+
+        return c;
     }
 
     /**
