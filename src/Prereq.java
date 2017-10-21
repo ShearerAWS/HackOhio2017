@@ -1,8 +1,10 @@
 
 public class Prereq {
-    String Category;
+    char Category;
+    Course course;
 
-    public Prereq(Course c, String cat) {
-
+    public Prereq(Course c, char cat) {
+        this.course = c;
+        this.Category = cat;
     }
 }
