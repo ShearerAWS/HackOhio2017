@@ -6,8 +6,6 @@ public class Course {
     int CourseNumber;
     int SubNumber;
     boolean IsHonors;
-
-    //Strings in prereq include tag letter at beginning for parsing
     ArrayList<Prereq> requirements = new ArrayList<Prereq>();
 
     /**
