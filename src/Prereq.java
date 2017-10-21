@@ -1,13 +1,17 @@
 import java.util.ArrayList;
 
 public class Prereq {
-    ArrayList<Course> courses;
+    ArrayList<String> courses;
     ArrayList<Character> types;
+
+    public Prereq(ArrayList<String> c, ArrayList<Character> types) {
+
+    }
 
     /**
      * @return the courses
      */
-    public ArrayList<Course> getCourses() {
+    public ArrayList<String> getCourses() {
         return this.courses;
     }
 
@@ -15,7 +19,7 @@ public class Prereq {
      * @param courses
      *            the courses to set
      */
-    public void setCourses(ArrayList<Course> courses) {
+    public void setCourses(ArrayList<String> courses) {
         this.courses = courses;
     }
 
@@ -44,5 +48,26 @@ public class Prereq {
      * boolean hasCourse = false; for (Course c : coursesTaken) { if
      * (p.getCourse().equals(c)) { hasCourse = true; } } return hasCourse; }
      */
+    public boolean hasPrereqs(ArrayList<String> coursesTaken) {
+        boolean hasAll = true;
+        char presentType = 'a';
+        for (int i = 0; i < this.courses.size(); i++) {
+            String c = this.courses.get(i);
+            char type = this.types.get(i);
+            if (presentType == type) {
 
+            }
+        }
+        return hasAll;
+    }
+
+    public boolean hasPrereq(String c, ArrayList<String> coursesTaken) {
+        boolean hasP = false;
+        for (String s : coursesTaken) {
+            if (s.equals(c)) {
+                hasP = true;
+            }
+        }
+        return hasP;
+    }
 }
