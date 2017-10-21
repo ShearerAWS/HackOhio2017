@@ -1,20 +1,37 @@
+import java.util.ArrayList;
+
 public class Course {
 
     String Department;
     int CourseNumber;
     int SubNumber;
+    int CreditHours;
     boolean IsHonors;
     Prereq requirements;
 
     public Course(String department, int courseNumber, int subNumber,
-            boolean isHonors, Prereq requirements) {
+            int creditHours, boolean isHonors, Prereq requirements) {
 
         super();
         this.Department = department;
         this.CourseNumber = courseNumber;
         this.SubNumber = subNumber;
+        this.CreditHours = creditHours;
         this.IsHonors = isHonors;
         this.requirements = requirements;
+    }
+
+    @Override
+    public String toString() {
+        String s = "";
+        String h = "";
+        if (this.SubNumber != -1) {
+            s = "." + this.SubNumber;
+        }
+        if (this.IsHonors) {
+            h = "(H)";
+        }
+        return this.Department + this.CourseNumber + s + h;
     }
 
     public static Course newCourse(String line) {
@@ -22,11 +39,23 @@ public class Course {
         String dept = lineArray[0];
         int num = Integer.parseInt(lineArray[1]);
         int subNum = Integer.parseInt(lineArray[2]);
-        boolean hon = Integer.parseInt(lineArray[3]) == 1;
+        int hour = Integer.parseInt(lineArray[3]);
+        boolean hon = Integer.parseInt(lineArray[4]) == 1;
+        String[] reqs = line.split(":");
+        ArrayList<String> courses = new ArrayList<String>();
+        ArrayList<Character> types = new ArrayList<Character>();
+        for (int i = 0; i < reqs.length; i++) {
+            String[] temp = reqs[i].split(",");
+            for (int j = 0; j < temp.length; j++) {
+                courses.add(temp[i]);
+                types.add((char) (i + 94));
 
-        Prereq pre = new Prereq();
+            }
+        }
 
-        Course c = new Course(dept, num, subNum, hon, pre);
+        Prereq pre = new Prereq(courses, types);
+
+        Course c = new Course(dept, num, subNum, hour, hon, pre);
 
         return c;
     }
