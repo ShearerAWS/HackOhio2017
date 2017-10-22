@@ -8,7 +8,7 @@ public class Course {
     int CreditHours;
     boolean IsHonors;
     Prereq requirements;
-    String Title;
+    String title;
 
     public Course(String department, int courseNumber, int subNumber,
             int creditHours, boolean isHonors, Prereq requirements,
@@ -21,7 +21,7 @@ public class Course {
         this.CreditHours = creditHours;
         this.IsHonors = isHonors;
         this.requirements = requirements;
-        this.Title = title;
+        this.title = title;
     }
 
     @Override
@@ -38,7 +38,8 @@ public class Course {
     }
 
     public static Course newCourse(String line) {
-        String[] lineA = line.split("|");
+        String[] lineA = line.split("#");
+        String title = lineA[1];
         String[] lineArray = lineA[0].split(" ");
         String dept = lineArray[0];
         int num = Integer.parseInt(lineArray[1]);
@@ -59,7 +60,7 @@ public class Course {
 
         Prereq pre = new Prereq(courses, types);
 
-        Course c = new Course(dept, num, subNum, hour, hon, pre, lineA[1]);
+        Course c = new Course(dept, num, subNum, hour, hon, pre, title);
 
         return c;
     }
@@ -129,6 +130,10 @@ public class Course {
      */
     public Prereq getRequirements() {
         return this.requirements;
+    }
+
+    public String getTitle() {
+        return this.title;
     }
 
     /**

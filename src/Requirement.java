@@ -37,12 +37,12 @@ public class Requirement {
             return true;
         }
         for (Course c : this.courses) {
-            if (!taken.contains(c)) {
+            if (taken.contains(c)) {
                 return true;
             }
         }
         for (Requirement r : this.subReqs) {
-            if (!r.meetsRequirements(taken)) {
+            if (r.meetsRequirements(taken)) {
                 return true;
             }
         }
