@@ -5,7 +5,8 @@ public class Prereq {
     ArrayList<Character> types;
 
     public Prereq(ArrayList<String> c, ArrayList<Character> types) {
-
+        this.courses = c;
+        this.types = types;
     }
 
     /**
@@ -49,35 +50,30 @@ public class Prereq {
      * (p.getCourse().equals(c)) { hasCourse = true; } } return hasCourse; }
      */
     public boolean hasPrereqs(ArrayList<String> coursesTaken) {
-        if (this.courses.size() == 1 && this.courses.get(0) == "%") {
+        /*
+         * if (this.courses.size() == 1 && this.courses.get(0) == "%") { return
+         * true; } else if (this.courses.size() == 1) { return
+         * this.hasPrereq(this.courses.get(0), coursesTaken); } boolean hasAll =
+         * false; char presentType = 96; ArrayList<String> temp = new
+         * ArrayList<String>(); ArrayList<Boolean> finalResults = new
+         * ArrayList<Boolean>(); for (int i = 0; i < this.courses.size(); i++) {
+         * char type = this.types.get(i); if (presentType == type) {
+         * temp.add(this.courses.get(i)); } else { if (temp.size() >= 1) {
+         * finalResults.add(this.hasPrereqs(temp)); } } } if (temp.size() >= 1)
+         * { finalResults.add(this.hasPrereqs(temp)); } hasAll = true; for (int
+         * i = 0; i < finalResults.size(); i++) { if (finalResults.get(i) ==
+         * false) { hasAll = false; } } return hasAll;
+         */
+        if (this.courses.size() == 0 || this.courses.get(0).equals("%")) {
             return true;
-        } else if (this.courses.size() == 1) {
-            return this.hasPrereq(this.courses.get(0), coursesTaken);
         }
-        boolean hasAll = false;
-        char presentType = 96;
-        ArrayList<String> temp = new ArrayList<String>();
-        ArrayList<Boolean> finalResults = new ArrayList<Boolean>();
-        for (int i = 0; i < this.courses.size(); i++) {
-            char type = this.types.get(i);
-            if (presentType == type) {
-                temp.add(this.courses.get(i));
-            } else {
-                if (temp.size() >= 1) {
-                    finalResults.add(this.hasPrereqs(temp));
-                }
+
+        for (String s : this.courses) {
+            if (!coursesTaken.contains(s)) {
+                return false;
             }
         }
-        if (temp.size() >= 1) {
-            finalResults.add(this.hasPrereqs(temp));
-        }
-        hasAll = true;
-        for (int i = 0; i < finalResults.size(); i++) {
-            if (finalResults.get(i) == false) {
-                hasAll = false;
-            }
-        }
-        return hasAll;
+        return true;
     }
 
     public boolean hasPrereqs(ArrayList<String> coursesNeeded,
@@ -111,6 +107,7 @@ public class Prereq {
             }
         }
         return hasAll;
+
     }
 
     public boolean hasPrereq(String c, ArrayList<String> coursesTaken) {

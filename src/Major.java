@@ -20,7 +20,7 @@ public class Major {
     private Requirement generateRequirement(BufferedReader in)
             throws IOException {
         String name = in.readLine();
-        boolean allRequired = in.readLine().equals("true");
+        boolean allRequired = in.readLine().trim().equals("true");
         String line = in.readLine().trim();
         ArrayList<Course> courses = new ArrayList<Course>();
         ArrayList<Requirement> subReqs = new ArrayList<Requirement>();

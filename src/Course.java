@@ -46,7 +46,7 @@ public class Course {
         int subNum = Integer.parseInt(lineArray[2]);
         int hour = Integer.parseInt(lineArray[3]);
         boolean hon = Integer.parseInt(lineArray[4]) == 1;
-        String[] reqs = line.split(":");
+        String[] reqs = lineArray[5].split(":");
         ArrayList<String> courses = new ArrayList<String>();
         ArrayList<Character> types = new ArrayList<Character>();
         for (int i = 0; i < reqs.length; i++) {
@@ -54,7 +54,6 @@ public class Course {
             for (int j = 0; j < temp.length; j++) {
                 courses.add(temp[j]);
                 types.add((char) (j + 94));
-
             }
         }
 
@@ -85,6 +84,10 @@ public class Course {
      */
     public int getCourseNumber() {
         return this.CourseNumber;
+    }
+
+    public int getCreditHours() {
+        return this.CreditHours;
     }
 
     /**

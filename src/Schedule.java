@@ -80,7 +80,7 @@ public class Schedule {
                 index = i;
             }
         }
-        for (int i = 0; i <= index; i++) {
+        for (int i = 0; i < index; i++) {
             for (Course c : this.semesters.get(i)) {
                 courses.add(c);
             }
@@ -96,5 +96,17 @@ public class Schedule {
             }
         }
         return courses;
+    }
+
+    public int getTotalHours(String title) {
+        int total = 0;
+        for (int i = 0; i < this.semesterNames.size(); i++) {
+            if (this.semesterNames.get(i).equals(title)) {
+                for (Course c : this.semesters.get(i)) {
+                    total += c.getCreditHours();
+                }
+            }
+        }
+        return total;
     }
 }
