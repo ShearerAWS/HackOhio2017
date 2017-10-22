@@ -10,7 +10,7 @@ true
     ENGR 1181 1 2 0 %#Fundamentals of Engineering I
     ENGR 1182 1 2 0 ENGR1181#Fundamentals of Engineering II
     MATH 1151 -1 5 0 %#Calculus I
-    MATH 1172 -1 5 0 MATH 1151#Calculus 2 for Engineers
+    MATH 1172 -1 5 0 MATH1151#Calculus 2 for Engineers
     PHYSICS 1250 -1 5 0 MATH1151#Mechanics, Thermal Physics, and Waves
     ]
     [
