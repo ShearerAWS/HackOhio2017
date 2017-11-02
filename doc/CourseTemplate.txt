@@ -1,0 +1,100 @@
+Computer Science and Engineering
+Department of Engineering
+[
+Computer Science and Engineering Requirements
+true
+    [
+    General College of Engineering Requirements
+    true
+    ENGR 1100 6 1 0 %#Engineering Survey
+    ENGR 1181 1 2 0 %#Fundamentals of Engineering I
+    ENGR 1182 1 2 0 ENGR1181#Fundamentals of Engineering II
+    MATH 1151 -1 5 0 %#Calculus I
+    MATH 1172 -1 5 0 MATH1151#Calculus 2 for Engineers
+    PHYSICS 1250 -1 5 0 MATH1151#Mechanics, Thermal Physics, and Waves
+    ]
+    [
+    Computer Science Core
+    true
+    CSE 1223 -1 3 0 %#Intro to Java Programming
+    CSE 2221 -1 4 0 CSE1223#Software I
+    CSE 2231 -1 4 0 CSE2221#Software II
+    CSE 2321 -1 3 0 CSE2221#Foundations I
+    CSE 2331 -1 3 0 CSE2321#Foundations II
+    CSE 2421 -1 4 0 CSE2321#Systems I
+    CSE 2431 -1 3 0 CSE2421#Systems II
+        [
+        Choose one of the following:
+        false
+        CSE 2501 -1 1 0 %#Social, Ethical, and Professional Issues in Computing
+        PHILOS 1338 -1 4 0 %#Ethics in the Professions: Introduction to Computing Ethics and Effective Presentation
+        ]
+    ]
+    [
+    Non-Computer Science Core
+    true
+    ECE 2020 -1 3 0 %#Introduction to Analog Systems
+    ECE 2060 -1 3 0 %#Circuits and Introduction to Digital Logic
+    MATH 2568 -1 3 0 %#Linear Algebra
+    MATH 3345 -1 3 0 %#Foundations of Higher Mathematics
+    STAT 3470 -1 3 0 %#Introduction to Probability and Statistics for Engineers
+    ]
+    [
+    Computer Science Core Choices
+    true
+        [
+        Choose one of the following:
+        false
+        CSE 3231 -1 3 0 %#Software Engineering Techniques
+        CSE 3241 -1 3 0 %#Introduction to Database Systems
+        ]
+        [
+        Choose one of the following:
+        false
+        CSE 3321 -1 3 0 %#Automata and Formal Languages
+        CSE 3341 -1 3 0 %#Principles of Programming Languages
+        ]
+        [
+        Choose one of the following:
+        false
+        CSE 3421 -1 3 0 %#Introduction to Computer Architecture
+        CSE 3461 -1 3 0 %#Computer Networking and Internet Technologies
+        ]
+        [
+        Choose one of the following:
+        false
+        CSE 3521 -1 3 0 %#Survey of Artificial Intelligence I: Basic Techniques
+        CSE 3541 -1 3 0 %#Computer Game and Animation Techniques
+        ]
+        [
+        Choose one of the following:
+        false
+        CSE 3901 -1 3 0 %#Project: Design, Development, and Documentation of Web Applications
+        CSE 3902 -1 4 0 %#Project: Design, Development, and Documentation of Interactive Systems
+        CSE 3902 -1 4 0 %#Project: Design, Development, and Documentation of System Software
+        ]
+        [
+        Choose one of the following projects:
+        false
+        CSE 5911 -1 4 0 %#Capstone Design: Software Applications
+        CSE 5912 -1 4 0 %#Capstone Design: Game Design and Development
+        CSE 5913 -1 4 0 %#Capstone Design: Computer Animation
+        CSE 5914 -1 4 0 %#Capstone Design: Knowledge-Based Systems
+        CSE 5915 -1 4 0 %#Capstone Design: Information Systems
+        ]
+    ]
+    [
+    General Education Requirements
+    true
+    GENED 0001 -1 3 0 %#Writing and Communication Level 1
+    GENED 0002 -1 3 0 %#Writing and Communication Level 2
+    GENED 0003 -1 3 0 %#Social Sciences 1
+    GENED 0004 -1 3 0 %#Social Sciences 2
+    GENED 0005 -1 3 0 %#Historical Study
+    GENED 0006 -1 3 0 %#Literature
+    GENED 0007 -1 3 0 %#Visual and Performing Arts
+    GENED 0008 -1 3 0 %#2nd Historical Study or Cultures and Ideas
+    GENED 0009 -1 3 0 %#Diversity
+    GENED 0010 -1 3 0 %#Ethics  
+    ]
+]
